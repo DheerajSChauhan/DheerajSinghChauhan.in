@@ -17,7 +17,6 @@ const HomePage: React.FC = () => {
   return (
     <>
       <ThemeToggle />
-      <ResumeButton />
       
       <main>
         <Hero />
