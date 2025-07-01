@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
             </a>
             
             <a
-              href="https://wa.me/your-number"
+              href="https://wa.me/918630003996"
               className="group flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25 transform hover:scale-105 w-full sm:w-auto justify-center"
             >
               <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:scale-110" />
