@@ -304,6 +304,33 @@ body {
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
 
+/* Float animation for sticky notes */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(12deg);
+  }
+  50% { 
+    transform: translateY(-10px) rotate(12deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Animation delay for loading spinner */
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .custom-cursor,

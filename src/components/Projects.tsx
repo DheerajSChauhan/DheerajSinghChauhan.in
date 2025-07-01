@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import React from 'react';
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { ProjectModal } from './ProjectModal';
 
 interface Project {
   title: string;
   date: string;
   tech: string[];
   summary: string;
-  description: string;
-  features: string[];
   image: string;
+  slug: string;
   links?: {
     live?: string;
     github?: string;
@@ -23,17 +22,8 @@ const projects: Project[] = [
     date: 'Jan 2025',
     tech: ['Flutter', 'Dart', 'Firebase', 'Firestore'],
     summary: 'Cross-platform app for local service providers with 30% improved onboarding',
-    description: 'TaskIN is a comprehensive cross-platform mobile application that connects local service providers with customers. The app features a streamlined onboarding process that improved user adoption by 30% and includes real-time booking, service tracking, and integrated payment systems.',
-    features: [
-      'Cross-platform compatibility for iOS and Android',
-      'Real-time service booking and tracking',
-      'Integrated payment gateway with multiple options',
-      'Advanced user authentication and profile management',
-      'Push notifications for booking updates',
-      'Geolocation-based service provider matching',
-      'Rating and review system',
-    ],
     image: 'https://images.pexels.com/photos/3228866/pexels-photo-3228866.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    slug: 'taskin',
     links: {
       live: '#',
       github: '#',
@@ -44,17 +34,8 @@ const projects: Project[] = [
     date: 'Apr 2024',
     tech: ['React.js', 'Node.js', 'Express', 'MongoDB', 'Passport.js'],
     summary: 'College collaboration platform with 300+ sessions, 100% auth success',
-    description: 'Collab Sphere is a comprehensive college collaboration platform that facilitates seamless interaction between students, faculty, and administrators. The platform has successfully handled over 300 active sessions with a 100% authentication success rate and features real-time collaboration tools.',
-    features: [
-      'Real-time collaboration tools and chat system',
-      'Secure authentication with Passport.js',
-      'Project management and task assignment',
-      'Document sharing and version control',
-      'Video conferencing integration',
-      'Course management system',
-      'Grade tracking and analytics dashboard',
-    ],
     image: 'https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    slug: 'collab-sphere',
     links: {
       live: '#',
       github: '#',
@@ -65,17 +46,8 @@ const projects: Project[] = [
     date: 'Sep 2023',
     tech: ['Next.js', 'Tailwind', 'Clerk Auth', 'Convex DB'],
     summary: 'Multimedia note-taking app with 30% engagement increase',
-    description: 'NoteNest is an innovative multimedia note-taking application that revolutionizes how users capture, organize, and share their thoughts. With support for text, images, audio, and video notes, the platform achieved a 30% increase in user engagement and offers advanced search capabilities.',
-    features: [
-      'Multimedia note support (text, images, audio, video)',
-      'Advanced search and filtering capabilities',
-      'Real-time collaboration and sharing',
-      'Cloud synchronization across devices',
-      'Offline mode with automatic sync',
-      'Tag-based organization system',
-      'Export options in multiple formats',
-    ],
     image: 'https://images.pexels.com/photos/3694590/pexels-photo-3694590.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    slug: 'note-nest',
     links: {
       live: '#',
       github: '#',
@@ -85,18 +57,6 @@ const projects: Project[] = [
 
 export const Projects: React.FC = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedProject(null);
-  };
 
   return (
     <section
@@ -162,25 +122,19 @@ export const Projects: React.FC = () => {
                   )}
                 </div>
 
-                {/* Read More Button */}
-                <button
-                  onClick={() => openModal(project)}
+                {/* View Details Button */}
+                <Link
+                  to={`/project/${project.slug}`}
                   className="group/btn flex items-center gap-2 text-primary-500 hover:text-primary-600 font-medium transition-colors duration-200 text-sm sm:text-base"
                 >
-                  <span>Read More</span>
-                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-                </button>
+                  <span>View Details</span>
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                </Link>
               </div>
             </div>
           ))}
         </div>
       </div>
-
-      <ProjectModal
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      />
     </section>
   );
 };
