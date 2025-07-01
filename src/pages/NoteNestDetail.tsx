@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowLeft, ExternalLink, Github, FileText, Image, Mic, Video, Search, Cloud } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
-import { ResumeButton } from '../components/ResumeButton';
-
+// import { ResumeButton } from '../components/ResumeButton';
+/* ResumeButton removed as requested */
 export const NoteNestDetail: React.FC = () => {
   const features = [
     {
@@ -50,7 +50,7 @@ export const NoteNestDetail: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900">
       <ThemeToggle />
-      <ResumeButton />
+      {/* <ResumeButton /> */}
       
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 overflow-hidden">

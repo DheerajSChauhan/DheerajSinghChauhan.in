@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { useCustomCursor } from './hooks/useCustomCursor';
 import { ThemeToggle } from './components/ThemeToggle';
-import { ResumeButton } from './components/ResumeButton';
 import { Hero } from './components/Hero';
 import { TechStack } from './components/TechStack';
 import { Projects } from './components/Projects';
