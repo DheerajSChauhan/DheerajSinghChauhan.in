@@ -5,6 +5,7 @@ import slider1 from "@/assets/slider-1.jpeg";
 import slider2 from "@/assets/slider-2.jpeg";
 import slider3 from "@/assets/slider-3.jpeg";
 import slider4 from "@/assets/slider-4.jpeg";
+import slider6 from "@/assets/slider-6.jpg";
 
 const HeroSection = () => {
   return (
@@ -29,6 +30,7 @@ const HeroSection = () => {
             { src: slider2, alt: "VIT Bhopal University" },
             { src: slider3, alt: "Mountain View" },
             { src: slider4, alt: "Jal Mahal" },
+            { src: slider6, alt: "Aesthetic vibes" },
           ]}
           speed={1.2}
           cardWidth={360}
