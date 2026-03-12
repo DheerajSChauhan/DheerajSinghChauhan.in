@@ -34,7 +34,7 @@ const Header = () => {
 
           <div className="flex items-center gap-2">
             {/* Resume eye-follow button */}
-            <EyeFollowButton label="Resume" href="#" />
+            <EyeFollowButton label="Resume" href="/Dheeraj_Singh_Chauhan_Resume.pdf" download="Dheeraj_Singh_Chauhan_Resume.pdf" />
 
             {/* Search trigger */}
             <button
