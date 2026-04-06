@@ -13,6 +13,20 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "NagarConnect v2",
+    period: "2026",
+    url: "https://nagar-connect-v2.vercel.app/",
+    description: "Municipal grievance management platform enabling citizens to report civic issues, track resolution status, and engage with authorities through role-based dashboards.",
+    highlights: [
+      "Built a full-stack complaint lifecycle system with React (Vite), Node.js, and Express",
+      "Implemented role-based modules for users, ward admins, and main admins with dedicated dashboards",
+      "Integrated Supabase authentication flow with secure backend middleware and protected routes",
+      "Developed complaint discussion and feedback features to improve citizen-authority communication",
+      "Added structured backend scripts for admin/ward seeding and streamlined deployment configuration",
+    ],
+    tags: ["React.js", "Vite", "Tailwind CSS", "JavaScript", "Node.js", "Express.js", "Supabase"],
+  },
+  {
     name: "CollabSphere",
     period: "2024",
     url: "https://github.com/DheerajSChauhan",

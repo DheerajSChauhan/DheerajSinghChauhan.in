@@ -11,10 +11,10 @@ const achievements: Achievement[] = [
     title: "Hacktoberfest 2025",
     detail: "Contributed to 7+ open-source repositories",
   },
-  {
-    title: "Hack The Box Cyber Apocalypse CTF",
-    detail: "75th Global Rank",
-  },
+  // {
+  //   title: "Hack The Box Cyber Apocalypse CTF",
+  //   detail: "75th Global Rank",
+  // },
   {
     title: "Event Management",
     detail: "Freelancing Club (2024) – Coordinated the Freelance Arena event",
